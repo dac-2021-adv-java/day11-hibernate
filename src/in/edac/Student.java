@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,6 +12,7 @@ import javax.persistence.Table;
 @Table(name = "EDAC_STUDENT")
 public class Student implements Serializable {
 	@Id
+	@GeneratedValue
 	@Column(name = "ID")
 	private int id;
 	
