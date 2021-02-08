@@ -2,16 +2,28 @@ package in.edac;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "EDAC_STUDENT")
 public class Student implements Serializable {
 	@Id
+	@Column(name = "ID")
 	private int id;
+	
+	@Column(name = "USERNAME")
 	private String username;
+	
+	@Column(name = "PASSWORD")
 	private String password;
+	
+	@Column(name = "EMAIL", unique = true)
 	private String email;
+	
+	@Column(name = "MOBILE")
 	private String mobile;
 
 	public int getId() {
